@@ -19,7 +19,7 @@ class DataIngestion:
             )
             logger.info(f"{filename} dowloaded!with followinf info: \n{headers}")
         else:
-            logger.info(f"file already exists of size: {get_size(self.config.local_data_file)}")
+            logger.info(f"file already exists of size: {get_size(Path(self.config.local_data_file))}")
     
     def extract_zip_file(self):
         """
